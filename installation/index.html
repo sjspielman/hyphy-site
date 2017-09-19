@@ -9,8 +9,10 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     
       
-        <title>Installation - HyPhy - Hypothesis Testing using Phylogenies</title>
+        <title>HyPhy - Hypothesis Testing using Phylogenies - Information, documentation, and news about the HyPhy software package</title>
       
+      
+        <meta name="description" content="Information, documentation, and news about the HyPhy software package">
       
       
         <link rel="canonical" href="http://veg.github.io/hyphy-site/installation/">
@@ -29,8 +31,8 @@
       <link rel="apple-touch-icon" href="../images/logo.svg">
     
     
-    <link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon.ico">
-    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ base_url }}/img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="{{ base_url }}/img/favicon.ico">
     <style>
       @font-face {
       	font-family: 'Icon';
@@ -239,8 +241,8 @@
 
   <li>
     <a class=""
-      title="Resources and help" href="../resources/" >
-      Resources and help
+      title="Resources" href="../resources/" >
+      Resources
     </a>
 
     <!-- Expand active pages -->
@@ -287,6 +289,40 @@
 
 
       
+        <!-- Render sections -->
+
+  <li>
+    <span class="section">Other</span>
+    <ul>
+
+      <!-- Render pages of section -->
+      
+        <!-- Render sections -->
+
+
+  <li>
+    <a class=""
+      title="Evolutionary hypothesis testing" href="../methods/other/evo/" >
+      Evolutionary hypothesis testing
+    </a>
+
+    <!-- Expand active pages -->
+    
+  </li>
+
+
+      
+        <!-- Render sections -->
+
+
+
+      
+    </ul>
+  </li>
+
+<!-- Render page link -->
+
+      
     </ul>
   </li>
 
@@ -321,8 +357,8 @@
 
   <li>
     <a class=""
-      title="v2.3 Quick Start" href="../tutorials/dev-branch-tutorial/" >
-      v2.3 Quick Start
+      title="Labeling branches with phylotree" href="../tutorials/phylotree/" >
+      Labeling branches with phylotree
     </a>
 
     <!-- Expand active pages -->
@@ -396,14 +432,20 @@
 
 </li>
 <li>
-<p>Build HyPhy by running <code>make</code> with one of the following build targets given below. For example, to install the executable <code>HYPHYMP</code>, you would enter the following command:</p>
-<div class="code"><pre><span></span>make MP2
+<p>Build HyPhy by running <code>make</code> with one of the following build targets given below. Note that including the <code>-j</code> flag for make (i.e. <code>make -j &lt;target&gt;</code>) will dramatically speed this step up by taking advantage of multiple processors.</p>
+<div class="code"><pre><span></span>## make the HYPHYMP executable:
+make MP
+## Faster:
+make -j MP
+
+## make the HYPHYMPI executable:
+make MPI
 </pre></div>
 
 
 <ul>
 <li>
-<p><code>MP2/MP</code> - build a HyPhy executable (<code>HYPHYMP</code>) using <a href="http://www.openmp.org"><em>OpenMP</em></a> to support symmetric multiprocessing. If <em>OpenMP</em> is not installed or not supported by the compiler (e.g. LLVM), the compiled executable will not support multi-threading. You can confirm  case by examining the output from running <code>cmake</code>. If <code>openMP</code> is installed, you should see something similar to the following in the output:</p>
+<p><code>MP</code> - build a HyPhy executable (<code>HYPHYMP</code>) using <a href="http://www.openmp.org"><em>OpenMP</em></a> to support symmetric multiprocessing. If <em>OpenMP</em> is not installed or not supported by the compiler (e.g. LLVM), the compiled executable will not support multi-threading. You can confirm  case by examining the output from running <code>cmake</code>. If <code>openMP</code> is installed, you should see something similar to the following in the output:</p>
 <div class="code"><pre><span></span>-- Performing Test OpenMP_FLAG_DETECTED
 -- Performing Test OpenMP_FLAG_DETECTED - Success
 -- Try OpenMP CXX flag = [-fopenmp]
@@ -422,9 +464,6 @@
 </pre></div>
 
 
-</li>
-<li>
-<p><code>LIB</code> - build a HyPhy library (libhyphy_mp), optionally using OpenMP (see above) to support multiprocessing</p>
 </li>
 </ul>
 </li>

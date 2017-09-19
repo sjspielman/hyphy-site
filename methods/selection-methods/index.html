@@ -9,8 +9,10 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     
       
-        <title>Selection - HyPhy - Hypothesis Testing using Phylogenies</title>
+        <title>HyPhy - Hypothesis Testing using Phylogenies - Information, documentation, and news about the HyPhy software package</title>
       
+      
+        <meta name="description" content="Information, documentation, and news about the HyPhy software package">
       
       
         <link rel="canonical" href="http://veg.github.io/hyphy-site/methods/selection-methods/">
@@ -29,8 +31,8 @@
       <link rel="apple-touch-icon" href="../../images/logo.svg">
     
     
-    <link rel="shortcut icon" type="image/x-icon" href="../../assets/images/favicon.ico">
-    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ base_url }}/img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="{{ base_url }}/img/favicon.ico">
     <style>
       @font-face {
       	font-family: 'Icon';
@@ -225,8 +227,8 @@
 
   <li>
     <a class=""
-      title="Resources and help" href="../../resources/" >
-      Resources and help
+      title="Resources" href="../../resources/" >
+      Resources
     </a>
 
     <!-- Expand active pages -->
@@ -286,73 +288,123 @@
           
 
             <!-- Render anchor -->
-            <li class="anchor">
-              <a title="aBSREL" href="#absrel">
-                aBSREL
-              </a>
-            </li>
+            
+                <li class="anchor">
+                  <a title="aBSREL" href="#absrel">
+                    aBSREL
+                  </a>
+                </li>
+            
           
 
             <!-- Render anchor -->
-            <li class="anchor">
-              <a title="BUSTED" href="#busted">
-                BUSTED
-              </a>
-            </li>
+            
+                <li class="anchor">
+                  <a title="BUSTED" href="#busted">
+                    BUSTED
+                  </a>
+                </li>
+            
           
 
             <!-- Render anchor -->
-            <li class="anchor">
-              <a title="FEL" href="#fel">
-                FEL
-              </a>
-            </li>
+            
+                <li class="anchor">
+                  <a title="FEL" href="#fel">
+                    FEL
+                  </a>
+                </li>
+            
           
 
             <!-- Render anchor -->
-            <li class="anchor">
-              <a title="FUBAR" href="#fubar">
-                FUBAR
-              </a>
-            </li>
+            
+                <li class="anchor">
+                  <a title="FUBAR" href="#fubar">
+                    FUBAR
+                  </a>
+                </li>
+            
           
 
             <!-- Render anchor -->
-            <li class="anchor">
-              <a title="GARD" href="#gard">
-                GARD
-              </a>
-            </li>
+            
+                <li class="anchor">
+                  <a title="GARD" href="#gard">
+                    GARD
+                  </a>
+                </li>
+            
           
 
             <!-- Render anchor -->
-            <li class="anchor">
-              <a title="MEME" href="#meme">
-                MEME
-              </a>
-            </li>
+            
+                <li class="anchor">
+                  <a title="MEME" href="#meme">
+                    MEME
+                  </a>
+                </li>
+            
           
 
             <!-- Render anchor -->
-            <li class="anchor">
-              <a title="RELAX" href="#relax">
-                RELAX
-              </a>
-            </li>
+            
+                <li class="anchor">
+                  <a title="RELAX" href="#relax">
+                    RELAX
+                  </a>
+                </li>
+            
           
 
             <!-- Render anchor -->
-            <li class="anchor">
-              <a title="SLAC" href="#slac">
-                SLAC
-              </a>
-            </li>
+            
+                <li class="anchor">
+                  <a title="SLAC" href="#slac">
+                    SLAC
+                  </a>
+                </li>
+            
           
         </ul>
       
     
   </li>
 
+
+      
+        <!-- Render sections -->
+
+  <li>
+    <span class="section">Other</span>
+    <ul>
+
+      <!-- Render pages of section -->
+      
+        <!-- Render sections -->
+
+
+  <li>
+    <a class=""
+      title="Evolutionary hypothesis testing" href="../other/evo/" >
+      Evolutionary hypothesis testing
+    </a>
+
+    <!-- Expand active pages -->
+    
+  </li>
+
+
+      
+        <!-- Render sections -->
+
+
+
+      
+    </ul>
+  </li>
+
+<!-- Render page link -->
 
       
     </ul>
@@ -389,8 +441,8 @@
 
   <li>
     <a class=""
-      title="v2.3 Quick Start" href="../../tutorials/dev-branch-tutorial/" >
-      v2.3 Quick Start
+      title="Labeling branches with phylotree" href="../../tutorials/phylotree/" >
+      Labeling branches with phylotree
     </a>
 
     <!-- Expand active pages -->
@@ -444,7 +496,7 @@
 <!--------------------------------------------------------------------------------------->
 
 <h2 id="fel">FEL<a class="headerlink" href="#fel" title="Permanent link">#</a></h2>
-<p>FEL (<strong>F</strong>ixed <strong>E</strong>fects <strong>L</strong>ikelihood) uses a maximum-likelihood (ML) approach to infer nonsynoymous (dN) and synonymous (dS) substitution rates on a per-site basis for a given coding alignment and corresponding phylogeny. This method assumes that the selection pressure for each site is constant along the entire phylogeny. </p>
+<p>FEL (<strong>F</strong>ixed <strong>E</strong>ffects <strong>L</strong>ikelihood) uses a maximum-likelihood (ML) approach to infer nonsynoymous (dN) and synonymous (dS) substitution rates on a per-site basis for a given coding alignment and corresponding phylogeny. This method assumes that the selection pressure for each site is constant along the entire phylogeny. </p>
 <p>After optimizing branch lengths and nucleotide substitution parameters, FEL fits a MG94xREV model to each codon site to infer site-specific nonsynonymous and synonymous (dN and dS, respectively) substitution rates. Hypothesis testing is then conducted on a site-specific basis, using the Likelihood Ratio Test, to ascertain if dN is significantly greater than dS.</p>
 <p><strong>If you use FEL in your analysis, please cite the following:</strong> <a href="https://doi.org/10.1093/molbev/msi105"><code>Kosakovsky Pond, SL and Frost, SDW. "Not So Different After All: A Comparison of Methods for Detecting Amino Acid Sites Under Selection." Mol. Biol. Evol. 22, 1208--1222 (2005).</code></a></p>
 <!--------------------------------------------------------------------------------------->
